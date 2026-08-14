@@ -49,6 +49,7 @@
 - [ResolveAppByCreatorAndNameBase](types_app_client.md#resolveappbycreatorandnamebase)
 - [ResolveAppClientByCreatorAndName](types_app_client.md#resolveappclientbycreatorandname)
 - [ResolveAppClientByNetwork](types_app_client.md#resolveappclientbynetwork)
+- [ResolvedPcSource](types_app_client.md#resolvedpcsource)
 
 ## Type Aliases
 
@@ -345,3 +346,26 @@ Resolve an app client instance by looking up the current network.
 #### Defined in
 
 [src/types/app-client.ts:414](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-client.ts#L414)
+
+___
+
+### ResolvedPcSource
+
+Ƭ **ResolvedPcSource**: `Object`
+
+Result of resolving a program counter against ARC-56 source info / source maps.
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `arc56Pc` | `number` | The program counter adjusted for ARC-56 `pcOffsetMethod` (e.g. after subtracting constant-block offset). This is the PC used to look up ARC-56 `sourceInfo` entries. |
+| `errorMessage?` | `string` | ARC-56 `errorMessage` associated with this PC, if any. |
+| `pc` | `number` | The program counter that was resolved (as provided by the caller / network error). |
+| `source?` | `string` | High-level source path from ARC-56 (e.g. `file.algo.ts:12`), if present. |
+| `teal?` | `string` | TEAL source text at `tealLine` when app spec source is available. |
+| `tealLine?` | `number` | 0-based TEAL line number when it can be resolved from a source map or ARC-56 teal index. |
+
+#### Defined in
+
+[src/types/app-client.ts:421](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-client.ts#L421)

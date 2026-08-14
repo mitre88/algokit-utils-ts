@@ -23,6 +23,7 @@
 - [types/app](modules/types_app.md)
 - [types/app-arc56](modules/types_app_arc56.md)
 - [types/app-client](modules/types_app_client.md)
+- [types/app-client.resolve-pc.spec](modules/types_app_client_resolve_pc_spec.md)
 - [types/app-client.spec](modules/types_app_client_spec.md)
 - [types/app-deployer](modules/types_app_deployer.md)
 - [types/app-factory](modules/types_app_factory.md)
